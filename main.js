@@ -23,7 +23,7 @@ const deviceConfig = {
 
 
 function isOn(callback) {
-    ping.probe(adapter.config.ip, { timeout: 500 }, function (err, res) {
+    ping.probe(adapter.config.ip, { timeout: 1 }, function (err, res) {
         callback(!err && res && res.alive);
     })
 }
